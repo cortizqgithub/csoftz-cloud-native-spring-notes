@@ -1,0 +1,30 @@
+site:
+  title: Cloud Native Spring In Action Notes
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://theowlo.blogspot.com/
+  start_page: csoftz-cloud-native-spring-notes::index.adoc
+content:
+  sources:
+  # embedding empty credentials in the URL disables the Edit this Page link for any page created from this repository
+  - url: git@github.com:cortizqgithub/csoftz-cloud-native-spring-notes.git
+    branches: master
+    start_path: docs
+asciidoc:
+  attributes:
+    experimental: ""
+    idprefix: ""
+    idseparator: ""
+    page-pagination: ""
+ui:
+  bundle:
+    #url: https://github.com/couchbase/docs-ui/releases/download/v245/ui-bundle.zip
+    #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    ## but as it requires login, and curl and antora does not use this
+    ## it needs to be locally referenced.
+    url: https://github.com/cortizqgithub/csoftz-antora-ui-default/releases/download/20200817-V1.0.0/ui-bundle.zip 
+    snapshot: true
+  supplemental_files:
+    - path: ui.yml
+      contents: |
+        static_files: [ .nojekyll ]
+    - path: .nojekyll

@@ -1,0 +1,86 @@
+= Glossary
+
+== A
+* *A/B Test:* Refers to the way a test is conducted with different paths.
+* *AC:* Acceptance Criteria.
+* *ADA:* Americans with Disabilities Act.
+* *ADM:* Application Development Maintenance.
+* *AKA:* Acronym for *Also known as*.
+* *AID:* Acronym for *Application Infrastructure Diagram*.
+* *API:* Acronym for *Application Programming Interface*.
+* *API contract:* A view of an *Application Programming Interface*
+(API) as a formal agreement between the caller and the callee. Often, unit
+tests help define the API contract by demonstrating the expected behavior.
+* *APM:* Application Performance Management.
+* *ARN:* Amazon Resource Name.
+* *ART:* Average Response Time (term used in Profiler apps).
+
+== C
+* *CLI:* Command Line Interface.
+* *CMD:* Refers to a command line interface program in the *Operating System*,
+also know as *Command Line Interface (CLI)*.
+* *CTA:* Call to Action.
+
+== E
+* *ECR:* Used in AWS for https://aws.amazon.com/ecr/[*_Elastic Container Registry_*^], 
+aka, Docker image registry.
+* *ECS:* Used in AWS for https://aws.amazon.com/ecs/[*_Elastic Container Services_*^],
+which is a service to launch any Dockerized application in the AWS cloud.
+* *EFM:* Enhancement Factory Model.
+
+== F
+* *Framework:* A semicomplete application that provides a reusable
+common structure to share among applications. Developers incorporate the
+framework into their own applications and extend it to meet their specific
+needs. Frameworks differ from toolkits by providing a coherent structure
+rather than a simple set of utility classes. A framework defines a skeleton, and
+the application defines its own features to fill out the skeleton. The developer
+code is called appropriately by the framework. Developers can worry less
+about whether a design is good and focus more on implementing domainspecific
+functions.
+
+== H
+* *HR:* Human Resources.
+
+== J
+* *JSON:* (JavaScript Object Notation) is a lightweight data-interchange format. 
+It is easy for humans to read and write. It is easy for machines to parse and 
+generate. It is based on a subset of the JavaScript Programming Language
+Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that is 
+completely language independent but uses conventions that are familiar to 
+programmers of the C-family of languages, including C, C++, C#, Java, 
+JavaScript, Perl, Python, and many others. 
+These properties make JSON an ideal data-interchange language.
+-- Ref: https://www.json.org/json-en.html[JSON ORG^]
+* *JSONPath:* It is a query language for JSON, similar to XPath for XML.
+-- Ref: https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html[JSONPath Syntax^]
+
+== R
+* *Redis:* It is an in-memory data structure store, used as a distributed, 
+in-memory key–value database, cache and message broker, with optional durability.
+Redis supports different kinds of abstract data structures, such as strings, 
+lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial
+indexes.
+
+== S
+* *SAP:* Enterprise Resource Planning software developed by German Company SAP ERP. 
+* *SLA:* Service-Level Agreement.
+* *SI:* System Integration.
+* *SIT:* System Integration Testing.
+
+== T
+* *Tredir:* Tredir is a IP:Geolocation service hosted in AWS. It provides a 
+reasonably accurate geographic location of a particular IP address. 
+Our customers teams use Tredir to improve customer experience by serving 
+more relevant content based on geographic location (primary language, Country, 
+state), and in some cases geofencing for content.
+
+== U
+* *Unit Test:* A test that examines the behavior of a distinct unit of
+work. A unit of work is a task that is not directly dependent on the completion
+of any other task. Within a Java application, the distinct unit of work is often,
+but not always, a single method.
+
+== V
+* *VPN:* Acronym for *Virtual Private Network*.
+

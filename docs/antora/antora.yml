@@ -1,0 +1,6 @@
+name:  csoftz-cloud-native-spring-notes
+title: Cloud Native Spring In Action Notes
+version: '2023.1.1'
+nav:
+- modules/ROOT/nav.adoc
+
