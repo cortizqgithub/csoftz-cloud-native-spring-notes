@@ -16,10 +16,14 @@ tests help define the API contract by demonstrating the expected behavior.
 * *ART:* Average Response Time (term used in Profiler apps).
 
 == C
+* *CaaS:* Containers as a Service. Consumersprovision and manage containers.
 * *CLI:* Command Line Interface.
 * *CMD:* Refers to a command line interface program in the *Operating System*,
 also know as *Command Line Interface (CLI)*.
-* *CTA:* Call to Action.
+* *CNCF:* The Cloud Native Computing Foundation (CNCF) is part of the Linux Foundation, and
+it _"builds sustainable ecosystems and fosters communities to support the growth 
+and health of cloud native open-source software."_
+* *CTA:* Call to Action (commonly a web link).
 
 == E
 * *ECR:* Used in AWS for https://aws.amazon.com/ecr/[*_Elastic Container Registry_*^], 
@@ -29,6 +33,9 @@ which is a service to launch any Dockerized application in the AWS cloud.
 * *EFM:* Enhancement Factory Model.
 
 == F
+* *FaaS:* relies on serverless computing to let consumers
+focus on implementing the business logic of their applications (often in the form of
+functions).
 * *Framework:* A semicomplete application that provides a reusable
 common structure to share among applications. Developers incorporate the
 framework into their own applications and extend it to meet their specific
@@ -41,6 +48,10 @@ functions.
 
 == H
 * *HR:* Human Resources.
+
+== I 
+* *IaaS:* Infrastructure as a Service. consumers can directly control and provision
+resources like servers, storage, and networks.
 
 == J
 * *JSON:* (JavaScript Object Notation) is a lightweight data-interchange format. 
@@ -55,6 +66,10 @@ These properties make JSON an ideal data-interchange language.
 * *JSONPath:* It is a query language for JSON, similar to XPath for XML.
 -- Ref: https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html[JSONPath Syntax^]
 
+== P
+* *PaaS:* Platform as a service. The platform provides infrastructure, tools,
+and APIs that developers can use to build and deploy applications.
+
 == R
 * *Redis:* It is an in-memory data structure store, used as a distributed, 
 in-memory key–value database, cache and message broker, with optional durability.
@@ -63,6 +78,8 @@ lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial
 indexes.
 
 == S
+* *SaaS:* Software as a service. consumers access applications as users, while the cloud provider manages the whole
+stack of software and infrastructure.
 * *SAP:* Enterprise Resource Planning software developed by German Company SAP ERP. 
 * *SLA:* Service-Level Agreement.
 * *SI:* System Integration.
