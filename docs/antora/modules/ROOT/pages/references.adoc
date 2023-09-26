@@ -1,7 +1,32 @@
 = References
 
+== B
+* https://buildpacks.io/[Buildpacks.io^]
+
 == C
-https://landscape.cncf.io/[CNCF Cloud Native Interactive Landscape^]
+* https://c4model.com/[The C4 model for visualising software architecture^] This is a tool to create Architectural diagrams.
+* https://landscape.cncf.io/[CNCF Cloud Native Interactive Landscape^]
 
-== Java
+== D
+* https://www.docker.com/[Docker^]
 
+== H
+* https://httpie.io/[Httpie^]
+
+== K
+* KNative CLI[https://knative.dev^]
+* Kubeval[https://www.kubeval.com/^]
+
+== S
+* https://sdkman.io[sdkman^]
+
+== T
+* https://12factor.net/[The Twelve Factors^]
+* https://tilt.dev/[Tilt^]
+
+== O
+* https://octant.dev[Octant^]
+* https://opencontainers.org/[Open Container Initiative^]
+
+== P
+* https://podman.io[Podman^]

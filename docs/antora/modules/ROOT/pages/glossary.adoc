@@ -25,6 +25,11 @@ it _"builds sustainable ecosystems and fosters communities to support the growth
 and health of cloud native open-source software."_
 * *CTA:* Call to Action (commonly a web link).
 
+== D
+* *DevOps:* A culture where people, regardless of title or background, work together to imagine,
+develop, deploy, and operate a system. K. Mugrage, “My definition of DevOps,” December 8, 2020, 
+http://mng.bz/AVox[My Definition of DevOps^].
+
 == E
 * *ECR:* Used in AWS for https://aws.amazon.com/ecr/[*_Elastic Container Registry_*^], 
 aka, Docker image registry.
