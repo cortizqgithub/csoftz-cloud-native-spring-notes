@@ -10,6 +10,9 @@
 == D
 * https://www.docker.com/[Docker^]
 
+== G
+* https://github.com/anchore/grype[Grype (vulnerability Scanner)^]
+
 == H
 * https://httpie.io/[Httpie^]
 
@@ -19,10 +22,13 @@
 
 == S
 * https://sdkman.io[sdkman^]
+* https://github.com/ePages-de/restdocs-api-spec[Spring Rest Docs + OpenApI (Gradle)]
+* https://github.com/BerkleyTechnologyServices/restdocs-spec[Spring Rest Docs + OpenApi (Maven)]
 
 == T
 * https://12factor.net/[The Twelve Factors^]
 * https://tilt.dev/[Tilt^]
+* https://tekton.dev[Tekton^]
 
 == O
 * https://octant.dev[Octant^]

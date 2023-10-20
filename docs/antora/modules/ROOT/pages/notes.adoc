@@ -1,0 +1,63 @@
+= Random Notes
+
+Oct.13/2023
+The business logic should be independent of anything else, including the API. If
+you’re interested in this topic, I suggest exploring the concepts of domain-driven design
+and hexagonal architecture.
+
+Oct.17/2023
+Page: 103, Section 3.5
+Deployment pipeline: Buind and test.
+
+* *Commit stage: *After a developer commits new code to the mainline, this stage
+goes through build, unit tests, integration tests, static code analysis, and packaging.
+At the end of this stage, an executable application artifact is published to
+an artifact repository. It is a _release candidate_. For example, it can be a *JAR* artifact
+published to a Maven repository or a container image published to a
+container registry. This stage supports the continuous integration practice.
+It’s supposed to be fast, possibly under five minutes, to provide developers
+with fast feedback about their changes and allow them to move on to the
+next task.
+* *Acceptance stage:* The publication of a new release candidate to the artifact
+repository triggers this stage, which consists of deploying the application to
+production-like environments and running additional tests to increase the confidence
+about its releasability. The tests that run in the acceptance stage are usually
+slow, but we should strive to keep the whole deployment pipeline execution
+to under one hour. Examples of tests included in this stage are functional
+acceptance tests and non-functional acceptance tests, such as performance tests,
+security tests, and compliance tests. If necessary, this stage can also include
+manual tasks like exploratory and usability tests. At the end of this stage, the
+release candidate is ready to be deployed to production at any time. If we are
+still not confident about it, this stage is missing some tests.
+* *Production stage:* After a release candidate has gone through the commit and
+acceptance stages, we are confident enough to deploy it to production. This
+stage is triggered manually or automatically, depending on whether the organization
+has decided to adopt a continuous deployment practice. The new release
+candidate is deployed to a production environment using the same deployment
+scripts employed (and tested) in the acceptance stage. Optionally, some final
+automated tests can be run to verify that the deployment was successful.
+
+Oct.18/2023
+*Commit Stage* normally uses the _'main'_ branch, vulnerability scanning, static code analysis (sonar)
+and code linting (Code Style practices).
+
+In order to use *Grype* on Windows (not yet there) Thomas Vitale recommends using Microsoft Windows WSL2, use https://docs.microsoft.com/en-us/windows/wsl/.
+NOTE: I was able to run it in WSL with CATALOG service but I don't know how to solve the report.
+
+coq-ubuntu@CO-IT022906:/mnt/c/work-data/csoftz/csoftz-polarbookstore/catalog-service$ $HOME/grype/grype .
+ ✔ Vulnerability DB                [no update available]
+ ✔ Indexed file system                                                                                                                                               .
+ ✔ Cataloged packages              [40 packages]
+ ✔ Scanned for vulnerabilities     [3 vulnerability matches]
+   ├── by severity: 2 critical, 1 high, 0 medium, 0 low, 0 negligible
+   └── by status:   3 fixed, 0 not-fixed, 0 ignored
+[0000]  WARN no explicit name and version provided for directory source, deriving artifact ID from the given path (which is not ideal)
+NAME                     INSTALLED  FIXED-IN        TYPE          VULNERABILITY        SEVERITY
+snakeyaml                1.33       2.0             java-archive  GHSA-mjmj-j48q-9wg2  High
+spring-boot-starter-web             2.5.12          java-archive  GHSA-36p3-wjmg-h94x  Critical
+spring-webflux                      5.2.20.RELEASE  java-archive  GHSA-36p3-wjmg-h94x  Critical
+
+
+Check Tekton (https://tekton.dev)
+
+Oct.19/2023
