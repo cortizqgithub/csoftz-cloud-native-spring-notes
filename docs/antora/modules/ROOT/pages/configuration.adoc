@@ -1,0 +1,202 @@
+= Configuration
+
+.Cloud native applications can be configured according to different strategies.
+[%header,cols="15%, 50%"]
+|===
+|Configuration strategy|Characteristics
+|Property files packaged with the application a|
+
+* These files can act as specifications of what configuration data the application supports. 
+* These are useful for defining sensible default values, mainly oriented to the development environment.
+
+|Environment variables a|
+* Environment variables are supported by any operating system, so they are great for portability. 
+* Most programming languages allow you access to the environment variables.
+In Java you can access them with the System.getenv() method.
+In Spring you can also rely on the Environment abstraction. 
+* These are useful for defining configuration data that depends on the infrastructure
+and platform where the application is deployed, such as active
+profiles, hostnames, service names, and port numbers.
+|Configuration Service a|
+* Provides configuration data persistence, auditing, and accountability. 
+* Allows secrets management by using encryption or dedicated secret vaults. 
+* This is useful for defining configuration data specific to the application, such
+as connection pools, credentials, feature flags, thread pools, and URLs to
+third-party services.
+|===
+
+== Propeties: Key/Value pairs for configuration
+Properties are key/value pairs supported in Java as first-class citizens with java.util
+.Properties. They play an essential role in many applications for storing configuration
+parameters outside of the compiled Java code. Spring Boot automatically loads
+them from different sources. When the same property is defined in multiple sources,
+there are rules that determine which one takes precedence. For example, if you
+specify a value for the _server.port_ property both in a property file and a commandline
+argument, the latter takes precedence over the former. The following is a prioritized
+list of some of the most common property sources, starting with the highest
+priority:
+
+. @TestPropertySource annotations on test classes
+. Command-line arguments
+. JVM System properties from System.getProperties()
+. OS environment variables from System.getenv()
+. Configuration data files
+. @PropertySource annotations on @Configuration classes
+. Default properties from SpringApplication.setDefaultProperties
+
+Configuration data files can be further prioritized, starting with the highest
+priority:
+
+. Profile-specific application properties from *_application-{profile}.properties_* and
+*_application-{profile}.yml_* files packaged outside your JAR
+. Application properties from *_application.properties_* and *_application.yml_* files
+packaged outside your JAR
+. Profile-specific application properties from *_application-{profile}.properties_* and
+*_application-{profile}.yml_* files packaged inside your JAR
+. Application properties from application.properties and application.yml files
+packaged inside your JAR
+
+
+Some code follows showing how to access any property key/value.
+
+[source,java]
+----
+@Autowired
+private Environment environment;
+
+public String getServerPort() {
+    return environment.getProperty("server.port");
+}
+----
+
+[source,java]
+----
+@Value("${server.port}")
+private String serverPort;
+
+public String getServerPort() {
+    return serverPort;
+}
+----
+
+Lastly and the now the recommended by the *_Spring Team_*.
+
+== Profiles: Feature flags and configuration groups
+This section presents Spring profiles in the context of two different use cases: feature
+flags and configuration groups.
+
+=== Using Profiles as feature flags
+Cosider your application uses data to operate, like loading a catalog of books, you could 
+getnerate some test data at startup when in development or test phase of the application and not
+tied this to a specific environment. Hence, loading test data can be modeled as a feature that you
+enable or disable through configuration. You could define a *_testdata_* profile to toggle
+the loading of this test data, keeping the profile independent from the deployment environment.
+
+[NOTE]
+====
+Instead of using profiles as feature flags, a more scalable and structured
+approach is defining custom properties to configure functionality, and
+relying on annotations such as *_@ConditionalOnProperty_* and *_@ConditionalOnCloudPlatform_* to control when certain beans should be loaded into the
+Spring application context. That's one of the foundations of Spring Boot autoconfiguration.
+For example, you could define a polar.testdata.enabled custom
+property and use the _@ConditionalOnProperty(name = "polar.testdata
+.enabled", havingValue = "true")_ annotation on the BookDataLoader class.
+====
+
+=== Using Profiles as configuration groups
+Using this mechanism allows your application to load configuration data only when a spcific profile is active. This is done by adding a suffix of the profile name to the *_application.yml_* file, for
+example if the profile name is _dev_, then the file would be namedas *_application-dev.ymel_* and any key/value defined would take precedence to any defined in *_application.yml_*.
+
+=== Retrieving properties
+Let's evaluate the *_polar.greeting_*.
+
+If you run 
+[source,bash]
+----
+$ java -jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar
+----
+
+The value is taken from the *_application.yml_* value as 'Welcome to the local book catalog!'.
+
+if you run
+
+[source,bash]
+----
+$ java -jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar \
+--polar.greeting="Welcome to the catalog from CLI"
+----
+
+It overrides the value defined in *_application.yml_*.
+
+if you run 
+
+[source,bash]
+----
+java -Dpolar.greeting="Welcome to the catalog from JVM" \
+-jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar
+----
+
+It overrides the value defined in *_application.yml_*.
+
+If you define the _polar.greeting_ both in the CLI and JVM, it will use the CLI over the JVM value (see precedence rules above).
+
+Both CLI arguments and JVM properties let you externalize the configuration and keep
+the application build immutable. However, they require different commands to run the
+application, which might result in errors at deployment time. A better approach is using
+environment variables, as recommended by the 15-Factor methodology.
+
+[NOTE]
+====
+Environment variables defined in the operating system are commonly used for
+externalized configuration, and they are the recommended option according to the
+15-Factor methodology. One of the advantages of environment variables is that every
+operating system supports them, making them portable across any environment.
+====
+
+To turn _polar.greeting_ into and ENV variable you type it as follows _POLAR_GREETING_.
+So you can use it as 
+
+[source,bash]
+----
+$ POLAR_GREETING="Welcome to the catalog from ENV" \
+$ java -jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar
+----
+
+== Configuration Repo (Git datastore)
+Define the external non-sensitive information about application configuration following the
+*_Spring Cloud Config_* conventions.
+
+* *_{application}:* The name of the application as defined by the _spring.application.name_ property.
+* *{profile}:* One of the active profiles defined by the _spring.profiles.active_ property.
+* *{label}:* A discriminator defined by the specific configuration data repository.
+In the case of Git, it can be a tag, a branch name, or a commit ID. It’s useful for
+identifying a versioned set of config files.
+
+Depending on your needs, you can organize the folder structure using different combinations,
+such as these:
+
+/{application}/application-{profile}.yml +
+/{application}/application.yml +
+/{application}-{profile}.yml + 
+/{application}.yml +
+/application-{profile}.yml +
+/application.yml +
+
+
+After you have setup the *_Configuration Server_*, you can access its rest API to get data.
+
+[source, bash]
+----
+$ http :8888/catalog-service/default <1>
+----
+<1> Connect to localhost using Httpie client and retrieves the default configuration.
+
+Spring Cloud Config Server exposes properties through a series of endpoints using
+different combinations of the *_{application}_*, *_{profile}_*, and *_{label}_* parameters:
+
+/{application}/{profile}[/{label}] +
+/{application}-{profile}.yml +
+/{label}/{application}-{profile}.yml +
+/{application}-{profile}.properties +
+/{label}/{application}-{profile}.properties +
+

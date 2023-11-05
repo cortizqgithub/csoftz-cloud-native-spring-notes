@@ -44,6 +44,8 @@ and code linting (Code Style practices).
 In order to use *Grype* on Windows (not yet there) Thomas Vitale recommends using Microsoft Windows WSL2, use https://docs.microsoft.com/en-us/windows/wsl/.
 NOTE: I was able to run it in WSL with CATALOG service but I don't know how to solve the report.
 
+[source,bash]
+----
 coq-ubuntu@CO-IT022906:/mnt/c/work-data/csoftz/csoftz-polarbookstore/catalog-service$ $HOME/grype/grype .
  ✔ Vulnerability DB                [no update available]
  ✔ Indexed file system                                                                                                                                               .
@@ -56,8 +58,21 @@ NAME                     INSTALLED  FIXED-IN        TYPE          VULNERABILITY 
 snakeyaml                1.33       2.0             java-archive  GHSA-mjmj-j48q-9wg2  High
 spring-boot-starter-web             2.5.12          java-archive  GHSA-36p3-wjmg-h94x  Critical
 spring-webflux                      5.2.20.RELEASE  java-archive  GHSA-36p3-wjmg-h94x  Critical
-
+----
 
 Check Tekton (https://tekton.dev)
 
-Oct.19/2023
+Oct.20/2023
+
+Some links on GitHub Actions
+
+GitHub Actions main Page
+https://docs.github.com/actions
+
+Building and testing Java with Maven
+https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+Oct.21/2023
+
+
+

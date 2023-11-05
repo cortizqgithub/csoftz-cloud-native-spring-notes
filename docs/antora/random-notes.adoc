@@ -1,0 +1,34 @@
+= Random Notes
+File: Random Notes
+Creatd: Oct.27/2023
+
+Oct.27/2023
+Use Spring Cloud Consul for Service Discovery pattern. -> THis is CLIENT SIDE Service discovery.
+Use Spring Cloud Load Balancer. --> Client mode
+
+Pattern Hedging in Cloud Distributed Microservices ????
+
+== Service discovery and Spring Cloud Kubernetes
+
+If you need to migrate existing applications that use one of the client-side service discovery
+options I mentioned in the previous section, you can use Spring Cloud Kubernetes
+to make the transition smoother. You can keep your existing service discovery
+and load-balancing logic in your application. However, instead of solutions like Spring
+Cloud Netflix Eureka, you can use the Spring Cloud Kubernetes Discovery Server for
+service registry. This can be a convenient way to migrate applications to Kubernetes
+without changing too much in your application code. For more information, refer to
+the project documentation: https://spring.io/projects/spring-cloud-kubernetes.
+Unless what you’re doing requires specific handling of service instances and load balancing
+in your applications, my recommendation is to migrate over time to using the
+native service discovery functionality offered by Kubernetes, aiming at removing infrastructural
+concerns from your applications.
+
+
+== Windows check for used ports
+
+[source,bash]
+----
+$ netstat -aon <1>
+----
+<1> Check for listening status.
+

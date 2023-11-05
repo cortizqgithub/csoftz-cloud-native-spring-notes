@@ -1,24 +1,64 @@
 = References
 
-== B
+Here you can find lins and other useful information that you can consult should you need.
+
+Each letter indicates a topic, regardles the name of the link initial letter.
+
+== Database Tools
+* https://goanother.com/[Another Redis Desktop Manager^]
+* https://dbeaver.io/[DBeaver Community - Universal Database Tool]
+* https://flywaydb.org[Flyway^]
+
+== Docker
+* https://docs.github.com/en/packages[GitHub Container Registry^]
 * https://buildpacks.io/[Buildpacks.io^]
+* https://paketo.io[Paketo buildpacks^]
+* https://registry.buildpacks.io/[Buildpack Registry^]
+* https://www.docker.com/[Docker^]
+* https://www.youtube.com/watch?v=HaXe7KYKSS4[Tanzu Tuesdays - Cloud Native Buildpacks with Emily Casey^]s
+
+== Kubernetes
+* https://helm.sh/[Helm - The package manager for Kubernetes`]
+* https://kodekloud.com/blog/kubectl-delete-deployment/[How to use Kubectl Delete Depployment (With Examples)^]
+* https://itnext.io/simplest-minimal-k8s-app-tutorial-with-rancher-desktop-in-5-min-5481edb9a4a5[Simplest minimal K8s app tutorial with Rancher Desktop in 5 min^]
+* https://kubernetes.io/docs/reference/glossary[K8s Glossary^]
+* https://octant.dev/[Octant - Visualize your Kubernetes workloads^]
+* https://tilt.dev/[Tilt^]
+* https://knative.dev[KNative CLI^]
+* https://www.kubeval.com/[Kubeval^]
+* https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/[Use Port Forwarding to Access Applications in a Cluster^]
+
+== Security
+* https://www.sigstore.dev/[sigstore - Sign. Verify. Protect^]
+
+== Testcontainers
+* https://testcontainers.com/[Testcontainers]
+* https://spring.io/blog/2023/06/23/improved-testcontainers-support-in-spring-boot-3-1[Improved Testcontainers Support in Spring Boot 3.1^]
+* https://spring.io/blog/2023/06/19/spring-boot-31-connectiondetails-abstraction[Spring Boot 3.1's ConnectionDetails abstraction^]
+* https://www.youtube.com/watch?v=7i0C_QWpSn8[Spring Boot 3.1.0 Testcontainers Support for Testing and Local Development^]
+* https://www.atomicjar.com/2023/05/spring-boot-3-1-0-testcontainers-for-testing-and-local-development/[Spring Boot Application Testing and Development with Testcontainers^]
+* https://www.youtube.com/watch?v=1PUshxvTbAc[Testcontaiers and Spring Boot for local development and integration testing with Josh Long and Oleg^]
+* https://www.youtube.com/watch?v=erp-7MCK5BU[Spring Boot Testcontainers - Integration Testing made easy with Dan Vega`]
+
+
+== WSL
+* https://learn.microsoft.com/en-us/windows/wsl/networking[Accessing network applications with WSL^]
 
 == C
 * https://c4model.com/[The C4 model for visualising software architecture^] This is a tool to create Architectural diagrams.
 * https://landscape.cncf.io/[CNCF Cloud Native Interactive Landscape^]
 
-== D
-* https://www.docker.com/[Docker^]
 
 == G
 * https://github.com/anchore/grype[Grype (vulnerability Scanner)^]
 
 == H
 * https://httpie.io/[Httpie^]
+* https://geekrewind.com/how-to-login-as-root-on-ubuntu-with-windows-wsl/[How to Login as root on Ubuntu with Windows WSL^]
+* https://learn.microsoft.com/en-us/windows/wsl/install[How to install Linux on Windows with WSL^]
 
-== K
-* KNative CLI[https://knative.dev^]
-* Kubeval[https://www.kubeval.com/^]
+== R
+* https://www.atomicjar.com/2023/06/running-testcontainers-tests-using-github-actions/Running[Testcontainers tests using GitHub Actions and Testcontainers Cloud^]
 
 == S
 * https://sdkman.io[sdkman^]
@@ -27,7 +67,6 @@
 
 == T
 * https://12factor.net/[The Twelve Factors^]
-* https://tilt.dev/[Tilt^]
 * https://tekton.dev[Tekton^]
 
 == O
@@ -36,3 +75,7 @@
 
 == P
 * https://podman.io[Podman^]
+* https://www.postgresql.org/[PostgreSQL]
+
+== Y
+* https://yaml.org[YAML: YAML Ain't Markup Language™`]

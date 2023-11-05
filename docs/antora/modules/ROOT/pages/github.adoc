@@ -1,0 +1,22 @@
+= GitHub
+
+== Connect docker to GitHub Container Registry
+
+[source,bash]
+----
+$ docker login ghcr.io -u <your-user-name> -p <your PAT token> <1>
+----
+<1> This is not recommended as the command would show the password in the command history or some log, use *_--password-stdin_* instead.
+
+[source,bash]
+----
+$ cat ~/my_password.txt | docker login --username foo --password-stdin
+----
+
+== Push an image to the GitHub Container Registry.
+
+[source,bash]
+----
+$ docker push ghcr.io/<your_github_username>/my-java-image:1.0.0
+----
+

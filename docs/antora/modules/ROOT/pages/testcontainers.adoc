@@ -1,0 +1,18 @@
+= Test Containers
+
+== Unit tests with real dependencies
+
+.After landing the cloaked Klingon bird of prey in Golden Gate park: 
+[quote,Captain James T. Kirk,Star Trek IV: The Voyage Home]   
+Everybody remember where we parked. 
+
+[quote,AtomicJar https://testcontainers.com/]
+Testcontainers is an open source framework for providing throwaway, lightweight instances of databases, message brokers, web browsers, or just about anything that can run in a Docker container.
+
+
+https://www.atomicjar.com/2023/06/running-testcontainers-tests-using-github-actions/Running[Testcontainers tests using GitHub Actions and Testcontainers Cloud^]
+
+== References
+
+* https://spring.io/blog/2023/06/23/improved-testcontainers-support-in-spring-boot-3-1[Improved Testcontainers Support in Spring Boot 3.1^]
+* https://spring.io/blog/2023/06/19/spring-boot-31-connectiondetails-abstraction [Spring Boot 3.1's ConnectionDetails abstraction^]

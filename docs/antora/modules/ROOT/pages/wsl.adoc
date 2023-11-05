@@ -1,0 +1,84 @@
+= WSL
+
+Intall from the following guide: https://learn.microsoft.com/en-us/windows/wsl/install[How to install Linux on Windows with WSL^]
+
+[NOTE]
+====
+When you install Rancher Desktop it instructs you to instal Windows WSL.
+====
+
+== Accessing ROOT access
+
+[NOTE]
+====
+If you ever need to use the *_root_* user for your *Ubuntu WSL distro*, use the following command.
+
+[source,bash]
+----
+$ ubuntu2204 config --default-user root <1>
+----
+<1> Where 2204 represents *_Ubuntu 22.04 LTS_* version installed. You must open the command terminal (Command APP) to execute it. Your *_Ubuntu 22.04 LTS_* terminal must be not opened when performing this command.
+
+To restore to the registered user (non-root user), use the following command.
+
+[source,bash]
+----
+$ ubuntu2004 config -- default-user [ubuntu user]
+----
+
+Follow this https://geekrewind.com/how-to-login-as-root-on-ubuntu-with-windows-wsl/[How to Login as root on Ubuntu with Windows WSL^]
+====
+
+== Accessing your Windows Host IP.
+Open your *_WSL Terminal_* and type the following command.
+
+[source,bash]
+----
+$ cat /etc/resolv.conf
+----
+
+So if your *Windows Machine* runs an application on port 8080, then type within your *_WSL Terminal_*.
+
+[source,cmd]
+----
+$ curl 172.17.64.1:8080
+---- 
+
+See: https://learn.microsoft.com/en-us/windows/wsl/networking[Accessing network applications with WSL^]
+
+WSL
+
+wsl -l -v
+wsl --update
+wsl --list --online
+wsl --install -d <distro name> => use wsl -l -o to get the distro name
+example 
+
+$ wsl --install -d Ubuntu-22.04
+
+
+https://pureinfotech.com/remove-linux-distro-wsl/
+https://learn.microsoft.com/en-us/windows/wsl/
+
+
+In WSL Ubuntu-22 Terminal
+Isntall SDK Man https://sdkman.io/
+https://sdkman.io/usage
+
+
+21-zulu
+21.crac-zulu
+11.0.21-zulu
+8.0.392-zulu
+
+
+--------> IntelliJ Location --> \\wsl$\Ubuntu-22-04\home\mmmi\projects\demo ????
+
+:/mnt/c/work-data/csoftz/csoftz-polarbookstore/catalog-service$ <-- This is the mount volume for the WSL to see my host files.
+
+curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b $HOME/grype 
+
+
+https://geekrewind.com/how-to-login-as-root-on-ubuntu-with-windows-wsl/[How to Login as root on Ubuntu with Windows WSL^]
+
+

@@ -1,0 +1,91 @@
+= Kubernetes
+
+[NOTE]
+====
+Check the following link to learn *_k8s_* terms.
+
+https://kubernetes.io/docs/reference/glossary[K8s Glossary]
+====
+
+== Get All 
+
+[source, bash]
+----
+$ kubectl get all
+----
+
+== Contexts
+
+[NOTE]
+====
+minikube can create clusters easily (clustes) ---> Need more study.
+====
+
+[source,bash]
+----
+$ kubectl config get-contexts # look for the one with the *
+----
+== Nodes
+[source,bash]
+----
+$ kubectl get nodes
+----
+
+== Pods
+[source,bash]
+----
+$ kubectl get pods
+----
+
+== Services
+
+[source,bash]
+----
+$ kubectl get service -o wide <1>
+----
+<1> Show available services in the cluster.
+
+[source, bash]
+----
+$ kubectl delete svc {serviceName} <1>
+----
+<1> Removes the service.
+
+== Other
+[source,bash]
+----
+$ kubectl apply -f {manifest.yml} <1>
+----
+<1> where {script.yml} is the script file to apply.
+
+[source,bash]
+----
+$ kubectl api-resources
+----
+
+[source,bash]
+----
+$ kubectl delete -f {manifest.yml} <1>
+----
+<1> where {script.yml} is the script file to apply.
+
+
+[source,bash]
+----
+$ kubectl get all -l app=catalog-service <1>
+----
+<1> Retrieves all resources associated with the label _catalog-service_.
+
+== References
+
+* https://itnext.io/simplest-minimal-k8s-app-tutorial-with-rancher-desktop-in-5-min-5481edb9a4a5[Simplest minimal K8s app tutorial with Rancher Desktop in 5 min^]
+* https://kubernetes.io/docs/reference/glossary[K8s Glossary]
+* https://kodekloud.com/blog/kubectl-delete-deployment/[How to use Kubectl Delete Depployment (With Examples)^]
+* https://kubernetes.io/docs/reference/kubectl/cheatsheet/[kubectl Cheat Sheet^]
+* https://helm.sh/[Helm - The package manager for Kubernetes`]
+* https://octant.dev/[Octant - Visualize your Kubernetes workloads^]
+* https://tilt.dev/[Tilt^]
+* https://knative.dev[KNative CLI^]
+* https://www.kubeval.com/[Kubeval^]
+* https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/[Use Port Forwarding to Access Applications in a Cluster^]
+
