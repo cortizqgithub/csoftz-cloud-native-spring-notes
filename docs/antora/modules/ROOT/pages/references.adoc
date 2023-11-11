@@ -4,6 +4,19 @@ Here you can find lins and other useful information that you can consult should 
 
 Each letter indicates a topic, regardles the name of the link initial letter.
 
+== Cloud Computing
+* https://www.youtube.com/watch?v=jkP199zzknw[Spring Cloud Gateway: Resilience, Security, and Observability by Thomas Vitale @ Spring I/O 2022^]
+* https://github.com/ThomasVitale/spring-io-2022-spring-cloud-gateway[spring-io-2022-spring-cloud-gateway^] Code repo for the video Spring Cloud Gateway: Resilience, Security, and Observability by Thomas Vitale @ Spring I/O 2022
+* https://github.com/ThomasVitale/spring-cloud-gateway-resilience-security-observability[https://github.com/ThomasVitale/spring-cloud-gateway-resilience-security-observability^]
+* https://www.youtube.com/watch?v=g7Dwv1BKnkg[DevoxxUA 2021.Thomas Vitale.Securing applications with OAuth2 and OpenID Connect using SpringSecurit^]
+* https://github.com/ThomasVitale/securing-apps-oauth2-oidc-spring-security-devoxx-ua-2021[securing-apps-oauth2-oidc-spring-security-devoxx-ua-2021^]
+* https://github.com/ThomasVitale/spring-security-examples[spring-security-examples^]
+* https://github.com/ThomasVitale/securing-java-apps-oauth2-oidc-spring-security[securing-java-apps-oauth2-oidc-spring-security^]
+
+== Databases
+* https://www.postgresql.org/[PostgreSQL^]
+* https://redis.com/[Redis^]
+
 == Database Tools
 * https://goanother.com/[Another Redis Desktop Manager^]
 * https://dbeaver.io/[DBeaver Community - Universal Database Tool]
@@ -17,6 +30,10 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://www.docker.com/[Docker^]
 * https://www.youtube.com/watch?v=HaXe7KYKSS4[Tanzu Tuesdays - Cloud Native Buildpacks with Emily Casey^]s
 
+== HTTP Tools
+* https://httpie.io/[Httpie^]
+* https://httpd.apache.org/docs/2.4/programs/ab.html[ab - Apache HTTP server benchmarking tool^]
+
 == Kubernetes
 * https://helm.sh/[Helm - The package manager for Kubernetes`]
 * https://kodekloud.com/blog/kubectl-delete-deployment/[How to use Kubectl Delete Depployment (With Examples)^]
@@ -27,6 +44,12 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://knative.dev[KNative CLI^]
 * https://www.kubeval.com/[Kubeval^]
 * https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/[Use Port Forwarding to Access Applications in a Cluster^]
+* https://github.com/kubernetes/ingress-nginx[ingress-nginx^]
+
+== Reactive Programming
+* https://www.reactivemanifesto.org/[The Rective Manifesto^]
+* https://www.reactive-streams.org/[Reactive Streams^]
+* https://spring.io/reactive[Spring Reactive Stack^]
 
 == Security
 * https://www.sigstore.dev/[sigstore - Sign. Verify. Protect^]
@@ -40,9 +63,13 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://www.youtube.com/watch?v=1PUshxvTbAc[Testcontaiers and Spring Boot for local development and integration testing with Josh Long and Oleg^]
 * https://www.youtube.com/watch?v=erp-7MCK5BU[Spring Boot Testcontainers - Integration Testing made easy with Dan Vega`]
 
-
 == WSL
 * https://learn.microsoft.com/en-us/windows/wsl/networking[Accessing network applications with WSL^]
+
+
+
+
+
 
 == C
 * https://c4model.com/[The C4 model for visualising software architecture^] This is a tool to create Architectural diagrams.
@@ -53,7 +80,6 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://github.com/anchore/grype[Grype (vulnerability Scanner)^]
 
 == H
-* https://httpie.io/[Httpie^]
 * https://geekrewind.com/how-to-login-as-root-on-ubuntu-with-windows-wsl/[How to Login as root on Ubuntu with Windows WSL^]
 * https://learn.microsoft.com/en-us/windows/wsl/install[How to install Linux on Windows with WSL^]
 
