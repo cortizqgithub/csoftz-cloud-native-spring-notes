@@ -1,9 +1,0 @@
-== Ports
-
-== edge-service:* 9000
-
-* *catalog-service:* 9001
-* *order-service:* 9002
-* *dispatcher-service:* 9005
-* *config-service:* 8888
-
