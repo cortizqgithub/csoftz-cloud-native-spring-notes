@@ -54,6 +54,15 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 == Security
 * https://www.sigstore.dev/[sigstore - Sign. Verify. Protect^]
 
+== Streams 
+* https://martinfowler.com/eaaDev/EventNarrative.html[Focusing on Events^]
+* https://martinfowler.com/eaaDev/DomainEvent.html[Domain Event^]
+* https://martinfowler.com/articles/201701-event-driven.html[What do you mean by 'Event-Driven']
+* https://rabbitmq.com[RabbitMQ^]
+* https://spring.io/projects/spring-amqp[Spring AMQP^]
+* https://spring.io/projects/spring-cloud-stream[Spring Cloud Stream^]
+* https://livebook.manning.com/book/microservices-patterns/chapter-4/[Managing transactions with sagas^]
+
 == Testcontainers
 * https://testcontainers.com/[Testcontainers]
 * https://spring.io/blog/2023/06/23/improved-testcontainers-support-in-spring-boot-3-1[Improved Testcontainers Support in Spring Boot 3.1^]

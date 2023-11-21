@@ -1,0 +1,38 @@
+= Streams
+
+Event-driven architectures can be based on two main models:
+
+* *Publisher/subscriber (pub/sub):* This model is based on subscriptions. Producers publish events that are sent to all subscribers to be consumed. Events cannot be
+replayed after being received, so new consumers joining will not be able to get the past events.
+* *Event streaming:* In this model, events are written to a log. Producers publish events as they occur, and they are all stored in an ordered fashion. Consumers
+don't subscribe to them, but they can read from any part of the event stream. In this model, events can be replayed. Clients can join at any time and receive all
+the past events.
+
+In a basic scenario, consumers receive and process events as they arrive. For specific use cases like pattern matching, they can also process a series of events over a time
+window. In the event streaming model, consumers have the additional possibility of processing event streams. At the core of event-driven architectures are platforms that
+can process and route events. For example, RabbitMQ is a common choice to use with the pub/sub model. Apache Kafka is a powerful platform for event stream processing.
+The event streaming model is fascinating and growing in popularity, thanks to the many technologies developed in the last few years, allowing you to build real-time data
+pipelines.
+
+Spring Cloud Function promotes the implementation of business logic via functions based on the standard interfaces introduced by Java 8: Supplier, Function, and
+Consumer.
+
+* *Supplier:* A supplier is a function with only output, no input. It's also known as a _producer_, _publisher_, or _source_.
+* *Function:* A function has both input and output. It's also known as a processor.
+* *Consumer:* A consumer is a function with input but no output. It's also known as a _subscriber_ or _sink_.
+
+== Spring Cloud Stream
+
+* *Destination binder:* The component providing the integration with external messaging systems, like _RabbitMQ_ or _Kafka_.
+* *Destination binding:* The bridge between the external messaging system entities, like queues and topics, and the application-provided producers and consumers.
+* *Message:* The data structure used by the application producers and consumers to communicate with the destination binders, and therefore with the external 
+messaging systems.
+
+== References
+
+* https://rabbitmq.com[RabbitMQ^]
+* https://spring.io/projects/spring-amqp[Spring AMQP^]
+* https://spring.io/projects/spring-cloud-stream[Spring Cloud Stream^]* https://livebook.manning.com/book/microservices-patterns/chapter-4/[Managing transactions with sagas^]
+
+
+
