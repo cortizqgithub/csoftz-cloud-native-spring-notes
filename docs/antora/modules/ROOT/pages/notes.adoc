@@ -72,7 +72,9 @@ https://docs.github.com/actions
 Building and testing Java with Maven
 https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
 
-Oct.21/2023
+Dec.1/2023
+For the book Spring Boot Cloud Native by Thomas Vitale there is a github organization with the separate repositories.
+https://github.com/PolarBookshop
 
 
 

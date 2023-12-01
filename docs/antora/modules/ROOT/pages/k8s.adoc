@@ -89,4 +89,5 @@ $ kubectl get all -l app=catalog-service <1>
 * https://www.kubeval.com/[Kubeval^]
 * https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/[Use Port Forwarding to Access Applications in a Cluster^]
 * https://github.com/kubernetes/ingress-nginx[ingress-nginx^]
+* https://keda.sh/[Kubernetes Event-driven Autoscaling^]
 

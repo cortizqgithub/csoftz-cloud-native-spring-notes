@@ -23,7 +23,7 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://flywaydb.org[Flyway^]
 
 == Docker
-* https://docs.github.com/en/packages[GitHub Container Registry^]
+* https://docs.github.com/en/packages[GitHub Packages documentation^]
 * https://buildpacks.io/[Buildpacks.io^]
 * https://paketo.io[Paketo buildpacks^]
 * https://registry.buildpacks.io/[Buildpack Registry^]
@@ -45,6 +45,7 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://www.kubeval.com/[Kubeval^]
 * https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/[Use Port Forwarding to Access Applications in a Cluster^]
 * https://github.com/kubernetes/ingress-nginx[ingress-nginx^]
+* https://keda.sh/[Kubernetes Event-driven Autoscaling^]
 
 == Reactive Programming
 * https://www.reactivemanifesto.org/[The Rective Manifesto^]
@@ -52,7 +53,18 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://spring.io/reactive[Spring Reactive Stack^]
 
 == Security
+* https://appauth.io/[AppAuth (OIDC/OAuth2 mobile secured tokens)^]
+* https://jwt.io/[JWT (debugger)^]
+* https://www.keycloak.org/[KeyCloak - Open Source Identity and Access Management]
+* https://www.okta.com/[Okta^]
 * https://www.sigstore.dev/[sigstore - Sign. Verify. Protect^]
+* https://www.keycloak.org/[Spring Authorization Server^]
+* https://spring.io/projects/spring-security[Spring Security^]
+* https://www.baeldung.com/spring-oauth-login-webflux[Spring Security OAuth Login with WebFlux^]
+* https://openid.net/specs/openid-connect-session-1_0.html[OIDC Session Management`]
+* https://openid.net/specs/openid-connect-frontchannel-1_0.html[OpenID Connect Front-Channel Logout 1.0 Abstract^]
+* https://openid.net/specs/openid-connect-backchannel-1_0.html[OIDC Back-Channel Logout^]
+* https://openid.net/specs/openid-connect-rpinitiated-1_0.html[OIDC RP-Initiated Logout^]
 
 == Streams 
 * https://martinfowler.com/eaaDev/EventNarrative.html[Focusing on Events^]

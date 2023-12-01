@@ -6,11 +6,11 @@ Whenever you need a command to execute *_Docker_*, this is the right place to ch
 
 [source,bash]
 ----
-$ docker conatiner rm -fv [ContainerID or name]
+$ docker container rm -fv [ContainerID or name]
 
 e.g.,
 
-$ docker cotainer rm -fv local-postgress
+$ docker container rm -fv local-postgress
 ----
 
 == Remove an image
@@ -91,3 +91,26 @@ $ docker network create [network name]
 ----
 $ docker network rm catalog-network
 ----
+
+== Publish to GitHub Container Registry (ghcr)
+The host name for Github Container Registry is _ghcr.io_ and to do anything related to this _Container_ registry, you must first 
+tell _docker_ how to login there.
+
+[source,bash]
+----
+$ docker login ghcr.io -u cortizqgithub -p PAT <1>
+----
+<1> In order to obtain this PAT (Personal Access Token). Go to you GitHub account then Settings>Developer Settings>Personal Access Token>Tokens (classic) and follow documentation if you get stuck. 
+
+Then you can run the docker push command.
+
+[source,bash]
+----
+$ docker push ghcr.io/<your_github_username>/<image-name>:<version> <1>
+----
+<1> Where <your_github_username> is in lowercase. +
+<image-name> represents the name for the artifact. +
+<version> tags the artifact to check several published artifacts.
+
+== References
+* https://docs.github.com/en/packages[GitHub Packages documentation^]
