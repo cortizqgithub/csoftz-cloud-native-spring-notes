@@ -64,6 +64,20 @@ and customizable foundation for building OpenID Connect 1.0 Identity Providers a
 Identity can create great user experiences, increase customer sign-ups, improve employee productivity, and get apps to market faster.
 * *https://auth0.com/[Auth0 by Okta^]:* Secure access for everyone. Bun not just anyone.
 
+== Keykoak With Spring Boot
+
+Follow this tutorial for grasping how to interact with Keycloak.
+
+https://www.baeldung.com/spring-boot-keycloak[A Quick Guide to Using Keycloak With Spring Boot^]
+
+Use this docker command in order to make the part of Keycloak from the Baeldung tutorial.
+
+[source,bash]
+----
+$ docker run --name local-keycloak -d -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.1 start-dev 
+----
+
+
 == References
 * https://appauth.io/[AppAuth (OIDC/OAuth2 mobile secured tokens)^]
 * https://jwt.io/[JWT (debugger)^]
@@ -77,6 +91,7 @@ Identity can create great user experiences, increase customer sign-ups, improve 
 * https://openid.net/specs/openid-connect-frontchannel-1_0.html[OpenID Connect Front-Channel Logout 1.0 Abstract^]
 * https://openid.net/specs/openid-connect-backchannel-1_0.html[OIDC Back-Channel Logout^]
 * https://openid.net/specs/openid-connect-rpinitiated-1_0.html[OIDC RP-Initiated Logout^]
-
+* https://www.baeldung.com/spring-boot-keycloak[A Quick Guide to Using Keycloak With Spring Boot^]
+* https://www.keycloak.org/getting-started/getting-started-docker[Docker - Get started with Keycloak on Docker^]
 
 

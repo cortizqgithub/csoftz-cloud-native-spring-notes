@@ -12,6 +12,7 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://github.com/ThomasVitale/securing-apps-oauth2-oidc-spring-security-devoxx-ua-2021[securing-apps-oauth2-oidc-spring-security-devoxx-ua-2021^]
 * https://github.com/ThomasVitale/spring-security-examples[spring-security-examples^]
 * https://github.com/ThomasVitale/securing-java-apps-oauth2-oidc-spring-security[securing-java-apps-oauth2-oidc-spring-security^]
+* https://www.youtube.com/watch?v=EKoq98KqvrI[Building an API Gateway in Java with Spring Cloud Gateway^]
 
 == Databases
 * https://www.postgresql.org/[PostgreSQL^]
@@ -65,6 +66,8 @@ Each letter indicates a topic, regardles the name of the link initial letter.
 * https://openid.net/specs/openid-connect-frontchannel-1_0.html[OpenID Connect Front-Channel Logout 1.0 Abstract^]
 * https://openid.net/specs/openid-connect-backchannel-1_0.html[OIDC Back-Channel Logout^]
 * https://openid.net/specs/openid-connect-rpinitiated-1_0.html[OIDC RP-Initiated Logout^]
+* https://www.baeldung.com/spring-boot-keycloak[A Quick Guide to Using Keycloak With Spring Boot^]
+* https://www.keycloak.org/getting-started/getting-started-docker[Docker - Get started with Keycloak on Docker^]
 
 == Streams 
 * https://martinfowler.com/eaaDev/EventNarrative.html[Focusing on Events^]
