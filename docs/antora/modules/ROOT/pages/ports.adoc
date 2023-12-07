@@ -1,0 +1,43 @@
+== Ports
+
+== Config Service
+
+* Applicaton name: edge-service
+* Spring Boot Port: 8888
+* Docker Compose Port: 8888
+* K8s Port: 8888
+
+== Edge Service
+
+* Applicaton name: edge-service
+* Spring Boot Port: 9100
+* Debug Port: 8100
+* Docker Compose Port: 9100
+* K8s Port: 9100
+
+== Catalog Service
+
+* Applicaton name: catalog-service
+* Spring Boot Port: 9101
+* Debug Port: 8101
+* Docker Compose Port: 9101
+* K8s Port: 9101
+
+== Order Service
+
+* Applicaton name: order-service
+* Spring Boot Port: 9102
+* Debug Port: 8102
+* Docker Compose Port: 9102
+* K8s Port: 9102
+
+== Dispatcher Service
+
+* Applicaton name: corder-service
+* Spring Boot Port: 9103
+* Debug Port: 8103
+* Docker Compose Port: 9103
+* K8s Port: 9103
+
+== Polar UI (No source code and it is a docker image by the author)
+* Port 9104

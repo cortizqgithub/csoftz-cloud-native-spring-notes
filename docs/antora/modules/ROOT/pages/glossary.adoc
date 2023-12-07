@@ -23,12 +23,19 @@ also know as *Command Line Interface (CLI)*.
 * *CNCF:* The Cloud Native Computing Foundation (CNCF) is part of the Linux Foundation, and
 it _"builds sustainable ecosystems and fosters communities to support the growth 
 and health of cloud native open-source software."_
+* *CORS:* Cross-Origin Request Sharing
+* *CSRF:* Cross-Site Request Forgery
 * *CTA:* Call to Action (commonly a web link).
 
+== D
+* *DevOps:* A culture where people, regardless of title or background, work together to imagine,
+develop, deploy, and operate a system. K. Mugrage, “My definition of DevOps,” December 8, 2020, 
+http://mng.bz/AVox[My Definition of DevOps^].
+
 == E
-* *ECR:* Used in AWS for https://aws.amazon.com/ecr/[*_Elastic Container Registry_*^], 
+* *ECR:* Used in AWS for https://aws.amazon.com/ecr/[Elastic Container Registry^], 
 aka, Docker image registry.
-* *ECS:* Used in AWS for https://aws.amazon.com/ecs/[*_Elastic Container Services_*^],
+* *ECS:* Used in AWS for https://aws.amazon.com/ecs/[Elastic Container Services^],
 which is a service to launch any Dockerized application in the AWS cloud.
 * *EFM:* Enhancement Factory Model.
 
@@ -45,6 +52,9 @@ the application defines its own features to fill out the skeleton. The developer
 code is called appropriately by the framework. Developers can worry less
 about whether a design is good and focus more on implementing domainspecific
 functions.
+
+== G
+* *ghcr:* Github Container Registry
 
 == H
 * *HR:* Human Resources.
@@ -65,10 +75,15 @@ These properties make JSON an ideal data-interchange language.
 -- Ref: https://www.json.org/json-en.html[JSON ORG^]
 * *JSONPath:* It is a query language for JSON, similar to XPath for XML.
 -- Ref: https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html[JSONPath Syntax^]
+* *JWA:* JSON Web Algorithms.
+* *JWS:* JSON Web Signature. 
+* *JWT:* JSON Web Tokens.
+* *JWE:* JSON Web Encryption.
 
 == P
 * *PaaS:* Platform as a service. The platform provides infrastructure, tools,
 and APIs that developers can use to build and deploy applications.
+* *PAT:* Personal Access Token.
 
 == R
 * *Redis:* It is an in-memory data structure store, used as a distributed, 

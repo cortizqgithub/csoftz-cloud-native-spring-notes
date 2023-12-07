@@ -1,0 +1,97 @@
+= Security
+
+Access control systems allow users access to resources only when their identity
+has been proven and they have the required permissions. To accomplish that, we
+need to follow three pivotal steps: identification, authentication, and authorization.
+
+. *Identification* happens when a user (human or machine) claims an identity. In
+the physical world, that's when I introduce myself by stating my name. In the
+digital world, I would do that by providing my username or email address. 
+. *Authentication* is about verifying the user's claimed identity through factors
+like a passport, a driver's license, a password, a certificate, or a token. When
+multiple factors are used to verify the user's identity, we talk about *_multi-factor
+authentication_*.
+. *Authorization* always happens after authentication, and it checks what the user is
+allowed to do in a given context.
+
+
+== JWT
+JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
+
+A JWT is not used by itself, but it's included in a larger structure,
+the JSON Web Signature (JWS), which ensures the integrity of the claims by digitally
+signing the JWT object.
+A digitally signed JWT (JWS) is a string composed of three parts encoded in
+Base64 and separated by a dot (.) character:
+
+[source,txt]
+====
+<header>.<payload>.<signature>
+====
+
+Where
+
+* *Header* A JSON object (called JOSE Header) containing information about the
+cryptographic operations performed on the payload. The operations follow the
+standards from the Javascript Object Signing and Encryption (JOSE) framework.
+* *Payload:* A JSON object (called Claims Set) containing the claims conveyed by
+the token. The JWT specification defines some standard claim names, but you
+can also define your own.
+* *Signature:* The signature of the JWT, ensuring that the claims have not been
+tampered with. A prerequisite of using a JWS structure is that we trust the entity
+issuing the token (the issuer), and we have a way to check its validity.
+
+
+When registering a OAuth2 client you must bear in mind the fact that it could be _public_ as a mobile application 
+or _confidential_ such as *_Desktop/Web_* application. The _Client_ is the entity that will receive tokens from
+the _Authorization Server_. The _Client_ will have to store them somewhere to be used in subsequent requests
+from the same user.
+
+The reason for this distinction is that no matter how much you try to hide the
+OIDC/OAuth2 tokens in the browser (cookies, local storage, session storage), they
+will always be at risk of being exposed and misused.
+
+== Authorization Servers
+
+=== Open Source
+* *https://www.keycloak.org/[Keycloak]:*  It is a mature, open source solution for running an Authorization Server yourself.
+* *https://www.keycloak.org/[Spring Authorization Server^]:* Provides implementations of the OAuth 2.1 and OpenID Connect 1.0 
+specifications and other related specifications. It is built on top of Spring Security to provide a secure, light-weight, 
+and customizable foundation for building OpenID Connect 1.0 Identity Providers and OAuth2 Authorization Server products.
+
+=== SaaS solution
+* *https://www.okta.com/[Okta^]:* Everything starts with Identity. 
+Identity can create great user experiences, increase customer sign-ups, improve employee productivity, and get apps to market faster.
+* *https://auth0.com/[Auth0 by Okta^]:* Secure access for everyone. Bun not just anyone.
+
+== Keykoak With Spring Boot
+
+Follow this tutorial for grasping how to interact with Keycloak.
+
+https://www.baeldung.com/spring-boot-keycloak[A Quick Guide to Using Keycloak With Spring Boot^]
+
+Use this docker command in order to make the part of Keycloak from the Baeldung tutorial.
+
+[source,bash]
+----
+$ docker run --name local-keycloak -d -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.1 start-dev 
+----
+
+
+== References
+* https://appauth.io/[AppAuth (OIDC/OAuth2 mobile secured tokens)^]
+* https://jwt.io/[JWT (debugger)^]
+* https://www.keycloak.org/[KeyCloak - Open Source Identity and Access Management]
+* https://www.okta.com/[Okta^]
+* https://www.sigstore.dev/[sigstore - Sign. Verify. Protect^]
+* https://www.keycloak.org/[Spring Authorization Server^]
+* https://spring.io/projects/spring-security[Spring Security^]
+* https://www.baeldung.com/spring-oauth-login-webflux[Spring Security OAuth Login with WebFlux^]
+* https://openid.net/specs/openid-connect-session-1_0.html[OIDC Session Management`]
+* https://openid.net/specs/openid-connect-frontchannel-1_0.html[OpenID Connect Front-Channel Logout 1.0 Abstract^]
+* https://openid.net/specs/openid-connect-backchannel-1_0.html[OIDC Back-Channel Logout^]
+* https://openid.net/specs/openid-connect-rpinitiated-1_0.html[OIDC RP-Initiated Logout^]
+* https://www.baeldung.com/spring-boot-keycloak[A Quick Guide to Using Keycloak With Spring Boot^]
+* https://www.keycloak.org/getting-started/getting-started-docker[Docker - Get started with Keycloak on Docker^]
+
+

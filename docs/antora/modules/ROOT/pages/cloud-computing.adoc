@@ -1,0 +1,22 @@
+= Cloud Computing
+
+[NOTE]
+====
+If you want to know more about the token bucket algorithm, read Paul Tarjan’s “Scaling your API with Rate Limiters” article
+about how they use it to implement rate limiters at Stripe https://stripe.com/blog/rate-limiters[Rate Limites].
+====
+
+== Resilience, Security, Observability
+
+* https://www.youtube.com/watch?v=jkP199zzknw[Spring Cloud Gateway: Resilience, Security, and Observability by Thomas Vitale @ Spring I/O 2022^]
+* https://github.com/ThomasVitale/spring-io-2022-spring-cloud-gateway[spring-io-2022-spring-cloud-gateway^] Code repo for the video Spring Cloud Gateway: Resilience, Security, and Observability by Thomas Vitale @ Spring I/O 2022
+* https://github.com/ThomasVitale/spring-cloud-gateway-resilience-security-observability[https://github.com/ThomasVitale/spring-cloud-gateway-resilience-security-observability^]
+
+== Api Gateway
+* https://www.youtube.com/watch?v=EKoq98KqvrI[Building an API Gateway in Java with Spring Cloud Gateway^]
+
+== Security
+* https://www.youtube.com/watch?v=g7Dwv1BKnkg[DevoxxUA 2021.Thomas Vitale.Securing applications with OAuth2 and OpenID Connect using SpringSecurit^]
+* https://github.com/ThomasVitale/securing-apps-oauth2-oidc-spring-security-devoxx-ua-2021[securing-apps-oauth2-oidc-spring-security-devoxx-ua-2021^]
+* https://github.com/ThomasVitale/spring-security-examples[spring-security-examples^]
+* https://github.com/ThomasVitale/securing-java-apps-oauth2-oidc-spring-security[securing-java-apps-oauth2-oidc-spring-security^]

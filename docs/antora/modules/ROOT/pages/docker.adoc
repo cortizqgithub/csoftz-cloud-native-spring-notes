@@ -1,0 +1,116 @@
+= Docker
+
+Whenever you need a command to execute *_Docker_*, this is the right place to check for a reference catalog on that.
+
+== Remove a container
+
+[source,bash]
+----
+$ docker container rm -fv [ContainerID or name]
+
+e.g.,
+
+$ docker container rm -fv local-postgress
+----
+
+== Remove an image
+
+[source,bash]
+----
+$ docker image rm [imageId]
+
+e.g.,
+
+$ docker image rm bf700010ce28
+----
+
+== Running a docker PostgreSQL instance
+
+[source,bash]
+----
+$ docker run -d \
+--name polar-postgres \
+-e POSTGRES_USER=user \
+-e POSTGRES_PASSWORD=password \
+-e POSTGRES_DB=polardb_catalog \
+-p 5432:5432 \
+postgres:14.4  <1>
+----
+<1> https://hub.docker.com/_/postgres
+
+== Create an image using Docker CLI
+
+First you must have a file named as *_'Dockerfile'_*, an example follows
+
+[source,docker]
+----
+FROM ubuntu:22.04
+RUN apt-get update && apt-get install -y default-jre
+ENTRYPOINT ["java", "--version"]
+----
+
+Then to create an image using this recipe, type:
+
+[source,bash]
+----
+$ docker build -t my-java-image:1.0.0 . <1>
+----
+<1> Open the folder containing the *_'Dockerfile'_* file and run this command, notice the dot, which indicates locate an use the *_'Dockerfile'_* in that folder.
+
+== Find info about the image
+
+[source,bash]
+----
+$ docker images my-java-image
+----
+
+== Tag an image
+
+[source,bash]
+----
+$ docker tag my-java-image:1.0.0 ghcr.io/cortizqgithub/my-java-image:1.0.0
+----
+
+== List Docker Network
+
+[source,bash]
+----
+$ docker network ls
+----
+
+== Create Network
+
+[source,bash]
+----
+$ docker network create [network name]
+----
+
+== Remove network
+
+[source,bash]
+----
+$ docker network rm catalog-network
+----
+
+== Publish to GitHub Container Registry (ghcr)
+The host name for Github Container Registry is _ghcr.io_ and to do anything related to this _Container_ registry, you must first 
+tell _docker_ how to login there.
+
+[source,bash]
+----
+$ docker login ghcr.io -u cortizqgithub -p PAT <1>
+----
+<1> In order to obtain this PAT (Personal Access Token). Go to you GitHub account then Settings>Developer Settings>Personal Access Token>Tokens (classic) and follow documentation if you get stuck. 
+
+Then you can run the docker push command.
+
+[source,bash]
+----
+$ docker push ghcr.io/<your_github_username>/<image-name>:<version> <1>
+----
+<1> Where <your_github_username> is in lowercase. +
+<image-name> represents the name for the artifact. +
+<version> tags the artifact to check several published artifacts.
+
+== References
+* https://docs.github.com/en/packages[GitHub Packages documentation^]

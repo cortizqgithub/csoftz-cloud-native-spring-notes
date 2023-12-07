@@ -1,0 +1,45 @@
+= Reactive Programming
+
+
+--> Copy the image 8.1 and 8.2 to showcase this.
+
+
+Scale and cost optimization are two critical reasons for moving to the cloud, so the
+reactive paradigm perfectly fits cloud native applications. Scaling applications to support
+a workload increase becomes less demanding. By using resources more efficiently,
+you can save money on the computational resources offered by a cloud provider.
+Another reason for moving to the cloud is resilience, and reactive applications also
+help with that.
+
+One of the essential features of reactive applications is that they provide nonblocking
+backpressure (also called control flow). This means that consumers can control
+the amount of data they receive, which lowers the risk of producers sending more
+data than consumers can handle, which can cause a DoS attack, slowing the application,
+cascading the failure, or even leading to a total crash.
+
+The reactive paradigm is a solution to the problem of blocking I/O operations that
+require more threads to handle high concurrency and which may lead to slow or entirely
+unresponsive applications. Sometimes the paradigm is mistaken as a way to increase the
+speed of an application. Reactive is about improving scalability and resilience, not speed.
+
+With great powers come great troubles, though. Going reactive is an excellent
+choice when you expect high traffic and concurrency with fewer computational
+resources or in streaming scenarios. However, you should also be aware of the additional
+complexity introduced by such a paradigm. Besides requiring a mindset shift to
+think in an event-driven way, reactive applications are more challenging to debug and
+troubleshoot because of the asynchronous I/O. Before rushing to rewrite all your
+applications to make them reactive, think twice about whether that’s necessary, and
+consider both the benefits and drawbacks.
+
+Conceptually, reactive streams resemble the Java Stream API in the way we use them
+to build data pipelines. One of the key differences is that a Java stream is pull-based:
+Licensed to Carlos Adolfo Ortiz Q <carlosaortiz@yahoo.com>
+258 CHAPTER 8 Reactive Spring: Resilience and scalability
+consumers process data in an imperative and synchronous fashion. Instead, reactive
+streams are push-based: consumers are notified by the producers when new data is
+available, so the processing happens asynchronously.
+
+== References
+* https://www.reactivemanifesto.org/[The Rective Manifesto^]
+* https://www.reactive-streams.org/[Reactive Streams^]
+* https://spring.io/reactive[Spring Reactive Stack^]
